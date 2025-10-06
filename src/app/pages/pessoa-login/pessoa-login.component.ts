@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pessoa-login',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './pessoa-login.component.html',
   styleUrl: './pessoa-login.component.css'
 })
