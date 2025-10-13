@@ -1,31 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Pessoa } from '../types/types';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class PessoaService {
-  constructor() { }
-  listar(): Pessoa[] {
-    return [
-      {
-        id: 1,
-        nome: "Enzo",
-        sobrenome: "Silva",
-        dtNascimento: "2005-01-10",
-      },
-      {
-        id: 2,
-        nome: "Valentina",
-        sobrenome: "Guimaraes",
-        dtNascimento: "2007-08-14",
-      },
 
-       {
-        id: 3,
-        nome: "Mickael",
-        sobrenome: "Costa",
-        dtNascimento: "2007-08-14",
-      },
-    ];
+  private readonly API = 'http://localhost:3000/pessoas'
+ 
+
+
+  constructor(private httpClient:   HttpClient) { }
+
+  listar() : Observable <Pessoa[]>{
+    return this.httpClient.get<Pessoa[]>(this.API)
   }
+ 
 }

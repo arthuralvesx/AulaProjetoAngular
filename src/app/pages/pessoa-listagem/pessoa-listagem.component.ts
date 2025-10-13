@@ -13,8 +13,14 @@ import { RouterLink } from '@angular/router';
 
 export class PessoaListagemComponent implements OnInit {
   listaPessoas: Pessoa[] = [];
+
   constructor(private service: PessoaService) { }
+  
   ngOnInit(): void {
-    this.listaPessoas = this.service.listar();
+    this.service.listar().subscribe((pessoas) => {
+      this.listaPessoas = pessoas;
+    });
   }
+
 }
+ 
