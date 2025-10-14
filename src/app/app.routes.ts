@@ -17,6 +17,6 @@ export const routes: Routes = [
      { 
         path:'pessoaform',
         component: PessoaFormComponent,
-        title:'pessoalistagem'
+        title:'pessoaform'
     }
 ];
