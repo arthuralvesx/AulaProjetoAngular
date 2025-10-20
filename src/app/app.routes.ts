@@ -5,17 +5,17 @@ import { PessoaFormComponent } from './pages/pessoa-form/pessoa-form.component';
 
 export const routes: Routes = [
     { 
-        path:'Login',
+        path:'pessoas/login',
         component: PessoaLoginComponent,
         title:'Login'
     },
     { 
-        path:'pessoalistagem',
+        path:'pessoas/pessoalistagem',
         component: PessoaListagemComponent,
         title:'pessoalistagem'
     },
      { 
-        path:'pessoaform',
+        path:'pessoas/pessoaform',
         component: PessoaFormComponent,
         title:'pessoaform'
     }
