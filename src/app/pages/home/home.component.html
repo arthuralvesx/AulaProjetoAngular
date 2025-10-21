@@ -1,0 +1,12 @@
+<div class="content-container">
+    <h1>{{ titulo }}</h1>
+
+    <div class="card-wrapper">
+
+        @for (item of items; track item) {
+            <app-card-item [imageUrl]="'assets/images/alexas.png'"></app-card-item>
+        }    
+
+    </div>
+
+</div>
